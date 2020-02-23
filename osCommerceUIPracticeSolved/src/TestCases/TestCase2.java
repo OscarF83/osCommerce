@@ -111,6 +111,7 @@ class TestCase2{
 		   9. Beloved 
 		*/
 		BuyProducts buyProducts = new BuyProducts(driver);
+		
 		buyProducts.orderProduct("9","3","o_prueba@hotmail.com","12345");
 		
 		
