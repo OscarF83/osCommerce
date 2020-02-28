@@ -68,7 +68,7 @@ class TestCase2{
 	}
 
 	@AfterAll
-	static void tearDownAfterClass() throws Exception {}
+	static void tearDownAfterClass() throws Exception {} // Método sin uso se deja de ejemplo
 
 	@BeforeEach
 	void setUp() throws Exception {

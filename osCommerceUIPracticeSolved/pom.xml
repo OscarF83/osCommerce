@@ -39,4 +39,10 @@
   		<scope>test</scope>
   	</dependency>
   </dependencies>
+  <properties>
+  <sonar.projectKey>OscarF83_osCommerce</sonar.projectKey>
+  <sonar.organization>oscarf83</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+  <sonar.login>2b4553a413f73a47000414f5ad5dc34f8b728662</sonar.login>
+</properties>
 </project>
