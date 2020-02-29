@@ -94,6 +94,39 @@ class TestCase1{
 		
 		
 	}
+	
+	@Test
+	void test2() throws InterruptedException {
+				
+		//Open URL
+		driver.get("https://demo.oscommerce.com/");
+		Thread.sleep(1000);
+		
+		/* Creamos el objeto buyProducts el cual tiene el método orderProduct que realiza un proceso de compra completo
+		   
+		   orderProduct(String númeroProducto, String cantidad, String nombreDeUsuario, String contraseña)
+		   
+		   Los productos han sido numerados por su posición en pantalla
+		   
+		   1	2	3
+		   4	5	6
+		   7	8	9
+		   
+		   1. Samsung Galaxy Tab
+		   2. Hewlett Packard Laserjet 1100Xi
+		   3. Microsoft IntelliMouse Explorer
+		   4. Microsoft Internet Keyboard PS/2
+		   5. Disciplies: Scared Lands
+		   6. The Wheel of Time
+		   7. Unreal Tournament
+		   8. Swat 3: Close Quarters Battle
+		   9. Beloved 
+		*/
+		BuyProducts buyProducts = new BuyProducts(driver);
+		buyProducts.orderProduct("9","3","o_prueba@hotmail.com","12345");
+		
+		
+	}
 
 }
 
