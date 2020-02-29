@@ -1,49 +1,26 @@
-package TestCases;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
+package testcases;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import Processes.BuyProducts;
-import Screens.Catalog;
-import Screens.Delivery;
-import Screens.Login;
-import Screens.MyCart;
-import Screens.OrderConfirmation;
-import Screens.OrderProcessed;
-import Screens.Payment;
-import Screens.ProductDescription;
+import processes.BuyProducts;
 
 
-
-class TestCase2{
+class TestCase1{
 	
 	private static WebDriver driver;
 	private static ChromeDriverService service;
-	
-	private Process process;
-	
-	private String productReference;
-	private String quantity;
 	
 	public static void createAndStartService() throws IOException {
 		service = new ChromeDriverService.Builder()
@@ -68,7 +45,9 @@ class TestCase2{
 	}
 
 	@AfterAll
-	static void tearDownAfterClass() throws Exception {} // Método sin uso se deja de ejemplo
+	static void tearDownAfterClass() throws Exception {
+	// Método sin uso se deja de ejemplo	
+	} 
 
 	@BeforeEach
 	void setUp() throws Exception {
@@ -111,7 +90,7 @@ class TestCase2{
 		   9. Beloved 
 		*/
 		BuyProducts buyProducts = new BuyProducts(driver);
-		buyProducts.orderProduct("9","3","o_prueba@hotmail.com","12345");
+		buyProducts.orderProduct("1","2","o_prueba@hotmail.com","12345");
 		
 		
 	}

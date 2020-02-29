@@ -1,6 +1,5 @@
-package Screens;
+package screens;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,9 +7,6 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class Catalog {
-
-	private WebDriver driver;
-	private String numberElement;
 	
 	//Localizadores para la Screen Catalog
 	
@@ -43,7 +39,6 @@ public class Catalog {
 	
 	// Constructor
 	public Catalog(WebDriver driver) {
-       	this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 	
@@ -57,7 +52,7 @@ public class Catalog {
 	 * String numberElement recibido
 	*/
 	public void clickProduct(String numberElement){
-		this.numberElement = numberElement;
+		
 		switch (numberElement) {
            case "1":  
         	   clickOnElement(producto1);

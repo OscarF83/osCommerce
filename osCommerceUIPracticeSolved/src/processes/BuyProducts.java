@@ -1,26 +1,21 @@
-package Processes;
+package processes;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.support.PageFactory;
 
-import Screens.Catalog;
-import Screens.Delivery;
-import Screens.Login;
-import Screens.MyCart;
-import Screens.OrderConfirmation;
-import Screens.OrderProcessed;
-import Screens.Payment;
-import Screens.ProductDescription;
+import screens.Catalog;
+import screens.Delivery;
+import screens.Login;
+import screens.MyCart;
+import screens.OrderConfirmation;
+import screens.OrderProcessed;
+import screens.Payment;
+import screens.ProductDescription;
 
 public class BuyProducts {
 	
 	private WebDriver driver;
-	private String nameProduct;
-	private String quantity;
-	private String username;
-	private String password;
 	
 	public BuyProducts(WebDriver driver) {
        	this.driver = driver;
@@ -28,11 +23,6 @@ public class BuyProducts {
 	
 	
 	public void orderProduct(String nameProduct, String quantity, String username, String password) throws InterruptedException{
-	
-		this.nameProduct = nameProduct;
-		this.quantity = quantity;
-		this.username = username;
-		this.password = password;
 		
 		/* Creamos el objeto catalog el cual tiene el método clickProduct que selecciona un producto en función del valor 
 		del String nameProduct */
